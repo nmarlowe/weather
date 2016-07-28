@@ -5,7 +5,7 @@ function loadWeather(pos) {
     location: pos,
     units: "f",
     success: function(weather) {
-      //console.log(weather);
+      console.log(weather);
 
       html = '<h2>Current Weather For '+weather.city+', '+weather.region+'</h2>';
       html += '<h4><i class="icon-'+weather.code+'"></i>&nbsp;'+weather.currently+'</h4>';
