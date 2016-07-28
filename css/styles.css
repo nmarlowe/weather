@@ -39,7 +39,7 @@ i {
 
 .footer a {
   color: #eee;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer a:hover, .footer a:visited {
@@ -108,7 +108,7 @@ i {
   }
 
   .footer {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
   }
 }
 
