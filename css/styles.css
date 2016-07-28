@@ -69,11 +69,11 @@ i {
     /*src: url('artillcleanweathericons-Regular.ttf'); format('truetype')
     font-weight: normal;
     font-style: normal;*/
-    src: url('weather-icons.eot');
-    src: url('weather-icons.eot?#iefix')
+    src: url('artillcleanweathericons-Regular.eot');
+    src: url('artillcleanweathericons-Regular.eot?#iefix')
              format('embedded-opentype'),
-         url('weather-icons.woff') format('woff'),
-         url('weather-icons.ttf') format('truetype');
+         url('artillcleanweathericons-Regular.woff') format('woff'),
+         url('artillcleanweathericons-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
