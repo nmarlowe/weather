@@ -8,6 +8,7 @@ function loadWeather(pos) {
       console.log(weather);
 
       html = '<h2>Current Weather For '+weather.city+', '+weather.region+'</h2>';
+      html += '<h6>As of ' +weather.updated+ '</h6>';
       html += '<h4><i class="icon-'+weather.code+'"></i>&nbsp;'+weather.currently+'</h4>';
       html += '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 
