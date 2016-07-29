@@ -7,24 +7,24 @@ function loadWeather(pos) {
     success: function(weather) {
       console.log(weather);
 
-      html = '<h2>Current Weather For '+weather.city+', '+weather.region+'</h2>';
-      html += '<h6>As of ' +weather.updated+ '</h6>';
-      html += '<h4><i class="icon-'+weather.code+'"></i>&nbsp;'+weather.currently+'</h4>';
-      html += '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      $("#loading").hide();
+      $("#location").html("<h2>Current Weather For " + weather.city + ", " + weather.region+'<h2>');
+      $("#updated").html("<h6>As of " +weather.updated+ "</h6>");
+      $("#current-icon").html('<h2><i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently + '&nbsp; | &nbsp;' + weather.temp + '&deg;F </h2><br>');
+      //$("#temp-now").html('<h2>' + weather.temp + '&deg;F&nbsp; | &nbsp;<i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently +'</h2>');
 
       changeForecast();
 
-      todayForecast = '<h4>Today: &nbsp;<i class="icon-'+weather.forecast[0].code+'"></i>&nbsp;'+weather.forecast[0].text+'</h4>';
+      todayForecast = '<h4>Today: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[0].code+'"></i>&nbsp;'+weather.forecast[0].text+'</h4><br>';
       todayForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;'+weather.high+'&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;'+weather.low+'</h4>';
 
-      tomorrowForecast = '<h4>Tomorrow: &nbsp;<i class="icon-'+weather.forecast[1].code+'"></i>&nbsp;'+weather.forecast[1].text+'</h4>';
+      tomorrowForecast = '<h4>Tomorrow: &nbsp;<i class="wi wi-yahoo-'+weather.forecast[1].code+'"></i>&nbsp;'+weather.forecast[1].text+'</h4><br>';
       tomorrowForecast += '<h4><i class="fa fa-arrow-up fa-1x high"></i>&nbsp;'+weather.forecast[1].high+'&nbsp;&nbsp;<i class="fa fa-arrow-down fa-1x low"></i>&nbsp;'+weather.forecast[1].low+'</h4>';
 
 
       var today = true;
       var nIntervId;
 
-      $("#weather").html(html);
       $("#forecast").html(todayForecast);
 
       function changeForecast() {
