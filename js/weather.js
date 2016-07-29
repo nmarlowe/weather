@@ -11,7 +11,6 @@ function loadWeather(pos) {
       $("#location").html("<h2>Current Weather For " + weather.city + ", " + weather.region+'<h2>');
       $("#updated").html("<h6>As of " +weather.updated+ "</h6>");
       $("#current-icon").html('<h2><i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently + '&nbsp; | &nbsp;' + weather.temp + '&deg;F </h2><br>');
-      //$("#temp-now").html('<h2>' + weather.temp + '&deg;F&nbsp; | &nbsp;<i class="wi wi-yahoo-' + weather.code +'"></i>&nbsp;' + weather.currently +'</h2>');
 
       changeForecast();
 
